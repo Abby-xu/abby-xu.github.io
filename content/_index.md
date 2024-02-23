@@ -79,8 +79,8 @@ sections:
           company_url: 'https://www.splunk.com/'
           company_logo: splunk
           location: San Francisco, California
-          date_start: '2021-05-01'
-          date_end: '2020-12-31'
+          date_start: '2021-05-24'
+          date_end: '2021-8-13'
           description: |2-
               * Designed and built the ETL pipeline to import infosec vendor sample data from 200+ sources into a new globally distributed demos environment to improve the event and product marketing flexibility in use, providing cost-saving options on 60k annual demonstration across 3 regions with permission outside of isolation through unlocking data stuck within a static demonstration
               * Exported sample data and Splunk Search Processing Language (SPL) code of dashboards to re-build corresponding demos on the cloud after generating a 1 billion row dataset in Python and connecting with Splunk Cloud by REST API for quicker result calling
@@ -91,7 +91,7 @@ sections:
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
       title: 'Accomplish&shy;ments'
-      subtitle:
+      subtitle: Click [HERE](http://abbyxr.com/projects.html) for more information.
       # Date format: https://docs.hugoblox.com/customization/#date-format
       date_format: Jan 2006
       # Accomplishments.
@@ -100,50 +100,44 @@ sections:
       #   Leave other parameters empty if not required.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - certificate_url: https://www.coursera.org
-          date_end: ''
-          date_start: '2021-01-25'
-          description: ''
-          icon: coursera
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Neural Networks and Deep Learning
+        - date_start: '2022-06-25'
+          description: 'Participated in Google Code Jam to I/O for Women 2022 and achieved a Global Rank of 386 among 3200+ competitive participants.'
+          icon: google
+          organization: Google
+          organization_url: https://codingcompetitionsonair.withgoogle.com/
+          title: Google Code Jam to I/O for Women 2022
           url: ''
-        - certificate_url: https://www.edx.org
-          date_end: ''
-          date_start: '2021-01-01'
-          description: Formulated informed blockchain models, hypotheses, and use cases.
-          icon: edx
-          organization: edX
-          organization_url: https://www.edx.org
-          title: Blockchain Fundamentals
-          url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          icon: datacamp
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
-          url: ''
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          icon: datacamp
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
-          url: ''
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          icon: datacamp
+        - date_end: ''
+          date_start: '2022-03-01'
+          description: Worked with a team of 6 to design a Helmet-mounted thermal imaging feedback device, and awarded the the Third Place Winner in Aggies Invent - First Responders with 500 dollars reward
+          icon: tamu
+          organization: TAMU Department of Engineering
+          organization_url: https://engineering.tamu.edu/index.html
+          title: 3rd Place of Aggies Invent 2022
+          url: https://engineering.tamu.edu/news/2022/04/aggies-invent-challenges-students-to-develop-tools-to-keep-first-responders-safe.html
+        - date_end: '2021-02-21'
+          date_start: '2021-02-01'
+          description: 'Worked with a team of 4 to solve the American Airlines Challenge, and awarded the Best Hardware Hack Sponsored by Digi-Key among 150+ teams'
+          icon: TAMUhack
+          organization: TAMUhack
+          organization_url: https://tamuhack.org/th/2020
+          title: 'Best Hardware Hack of TAMUhack 2021'
+          url: 'https://devpost.com/software/throne-locker'
+        - date_end: '2020-05-21'
+          date_start: '2020-02-01'
+          description: 'Led a team of six engineering students to participate eSMART, and awarded the First Place with 500 dollars reward'
+          icon: tamu
           organization: Texas A&M University at Galveston
-          organization_url: https://www.datacamp.com
-          title: 'Undergraduate Chemistry Poster Symposium'
+          organization_url: https://www.tamug.edu/
+          title: '1st Place of Educating Smart Marine Aggies Robotic Technologies Competition 2020'
+          url: https://engineering.tamu.edu/news/2020/08/galveston-campus-launches-inaugural-esmart-competition.html
+        - date_end: '2019-12-21'
+          date_start: '2019-09-01'
+          description: 'In 2019 Undergraduate Chemistry Poster Symposium, present the Second Place Poster Award in Chemical Health & Safety for the poster entitled "How NACL Intake Effects Daily Health"'
+          icon: tamu
+          organization: Texas A&M University at Galveston
+          organization_url: https://www.tamug.edu/
+          title: '2nd Place of TAMUG Undergraduate Chemistry Poster Symposium'
           url: ''
     design:
       columns: '2'
