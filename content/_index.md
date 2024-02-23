@@ -118,7 +118,7 @@ sections:
         - date_end: '2021-02-21'
           date_start: '2021-02-01'
           description: 'Worked with a team of 4 to solve the American Airlines Challenge, and awarded the Best Hardware Hack Sponsored by Digi-Key among 150+ teams'
-          icon: TAMUhack
+          icon: tamuhack
           organization: TAMUhack
           organization_url: https://tamuhack.org/th/2020
           title: 'Best Hardware Hack of TAMUhack 2021'
