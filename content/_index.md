@@ -80,7 +80,7 @@ sections:
           company_logo: splunk
           location: San Francisco, California
           date_start: '2021-05-24'
-          date_end: Aug 2021
+          date_end: '2021-08-17'
           description: |2-
               * Designed and built the ETL pipeline to import infosec vendor sample data from 200+ sources into a new globally distributed demos environment to improve the event and product marketing flexibility in use, providing cost-saving options on 60k annual demonstration across 3 regions with permission outside of isolation through unlocking data stuck within a static demonstration
               * Exported sample data and Splunk Search Processing Language (SPL) code of dashboards to re-build corresponding demos on the cloud after generating a 1 billion row dataset in Python and connecting with Splunk Cloud by REST API for quicker result calling
