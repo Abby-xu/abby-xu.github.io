@@ -39,11 +39,11 @@ features = ["page builder", "widgets", "themes", "search", "research publication
             "blog", "create courses", "talks", "events", "slides", "gallery", "contact form"]
 
 [author]
-  name = "George Cushen"
-  homepage = "https://georgecushen.com"
+  name = "Abby XU"
+  homepage = "http://abbyxr.com"
 
 # If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Abby Xu"
+  homepage = "http://abbyxr.com"
+  repo = "https://github.com/Abby-xu/abbyxu"

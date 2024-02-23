@@ -42,14 +42,14 @@ sections:
       title: Biography
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-  - block: skills
-    content:
-      title: Skills
-      text: ''
-      # Choose a user to display skills from (a folder name within `content/authors/`)
-      username: admin
-    design:
-      columns: '1'
+  # - block: skills
+  #   content:
+  #     title: Skills
+  #     text: ''
+  #     # Choose a user to display skills from (a folder name within `content/authors/`)
+  #     username: admin
+  #   design:
+  #     columns: '1'
   - block: experience
     content:
       title: Experience
@@ -62,27 +62,29 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
-          company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
-          date_end: ''
+        - title: Software Dev Engineer Intern
+          company: Amazon
+          company_url: 'https://www.aboutamazon.com/'
+          company_logo: amazon
+          location: Austin, Texas
+          date_start: '2022-05-16'
+          date_end: '2022-08-05'
           description: |2-
-              Responsibilities include:
+              * Built a full-stack web portal to enable the rest of the FireTV teams onboarding to the service involved with getting confidential on-device log data, resulting in a 30% reduction in the overall process time and providing a universal platform for data collection and status tracking.
+              * Used React for the front-end, AWS’s DynamoDB for an intermediate DB, and API Gateway for back-end integration (CRUD data)
+              * Designed and wrote up detailed documentation regarding intermediate/back-end API endpoints & database schemas
 
-              * Analysing
-              * Modelling
-              * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
-          company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
+        - title: Technical Marketing Intern - Security
+          company: Splunk
+          company_url: 'https://www.splunk.com/'
+          company_logo: splunk
+          location: San Francisco, California
+          date_start: '2021-05-01'
           date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
+          description: |2-
+          * Designed and built the ETL pipeline to import infosec vendor sample data from 200+ sources into a new globally distributed demos environment to improve the event and product marketing flexibility in use, providing cost-saving options on 60k annual demonstration across 3 regions with permission outside of isolation through unlocking data stuck within a static demonstration
+          * Exported sample data and Splunk Search Processing Language (SPL) code of dashboards to re-build corresponding demos on the cloud after generating a 1 billion row dataset in Python and connecting with Splunk Cloud by REST API for quicker result calling
+          * Transformed unstructured machine data, iterated utilization resulting in 75% run time improvement, and completed the 45-min ES demo presentation with another teammate
     design:
       columns: '2'
   - block: accomplishments
@@ -125,6 +127,24 @@ sections:
           organization_url: https://www.datacamp.com
           title: 'Object-Oriented Programming in R'
           url: ''
+          - certificate_url: https://www.datacamp.com
+          date_end: '2020-12-21'
+          date_start: '2020-07-01'
+          description: ''
+          icon: datacamp
+          organization: DataCamp
+          organization_url: https://www.datacamp.com
+          title: 'Object-Oriented Programming in R'
+          url: ''
+          - certificate_url: https://www.datacamp.com
+          date_end: '2020-12-21'
+          date_start: '2020-07-01'
+          description: ''
+          icon: datacamp
+          organization: Texas A&M University at Galveston
+          organization_url: https://www.datacamp.com
+          title: 'Undergraduate Chemistry Poster Symposium'
+          url: ''
     design:
       columns: '2'
   - block: collection
@@ -154,52 +174,52 @@ sections:
       # Choose a layout view
       view: compact
       columns: '2'
-  - block: portfolio
-    id: projects
-    content:
-      title: Projects
-      filters:
-        folders:
-          - project
-      # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
-      default_button_index: 0
-      # Filter toolbar (optional).
-      # Add or remove as many filters (`filter_button` instances) as you like.
-      # To show all items, set `tag` to "*".
-      # To filter by a specific tag, set `tag` to an existing tag name.
-      # To remove the toolbar, delete the entire `filter_button` block.
-      buttons:
-        - name: All
-          tag: '*'
-        - name: Deep Learning
-          tag: Deep Learning
-        - name: Other
-          tag: Demo
-    design:
-      # Choose how many columns the section has. Valid values: '1' or '2'.
-      columns: '1'
-      view: showcase
-      # For Showcase view, flip alternate rows?
-      flip_alt_rows: false
-  - block: markdown
-    content:
-      title: Gallery
-      subtitle: ''
-      text: |-
-        {{< gallery album="demo" >}}
-    design:
-      columns: '1'
-  - block: collection
-    id: featured
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      columns: '2'
-      view: card
+  # - block: portfolio
+  #   id: projects
+  #   content:
+  #     title: Projects
+  #     filters:
+  #       folders:
+  #         - project
+  #     # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
+  #     default_button_index: 0
+  #     # Filter toolbar (optional).
+  #     # Add or remove as many filters (`filter_button` instances) as you like.
+  #     # To show all items, set `tag` to "*".
+  #     # To filter by a specific tag, set `tag` to an existing tag name.
+  #     # To remove the toolbar, delete the entire `filter_button` block.
+  #     buttons:
+  #       - name: All
+  #         tag: '*'
+  #       - name: Deep Learning
+  #         tag: Deep Learning
+  #       - name: Other
+  #         tag: Demo
+  #   design:
+  #     # Choose how many columns the section has. Valid values: '1' or '2'.
+  #     columns: '1'
+  #     view: showcase
+  #     # For Showcase view, flip alternate rows?
+  #     flip_alt_rows: false
+  # - block: markdown
+  #   content:
+  #     title: Gallery
+  #     subtitle: ''
+  #     text: |-
+  #       {{< gallery album="demo" >}}
+  #   design:
+  #     columns: '1'
+  # - block: collection
+  #   id: featured
+  #   content:
+  #     title: Featured Publications
+  #     filters:
+  #       folders:
+  #         - publication
+  #       featured_only: true
+  #   design:
+  #     columns: '2'
+  #     view: card
   - block: collection
     content:
       title: Recent Publications
@@ -224,11 +244,11 @@ sections:
     design:
       columns: '2'
       view: compact
-  - block: tag_cloud
-    content:
-      title: Popular Topics
-    design:
-      columns: '2'
+  # - block: tag_cloud
+  #   content:
+  #     title: Popular Topics
+  #   design:
+  #     columns: '2'
   - block: contact
     id: contact
     content:
