@@ -127,24 +127,24 @@ sections:
           organization_url: https://www.datacamp.com
           title: 'Object-Oriented Programming in R'
           url: ''
-          - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          icon: datacamp
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
-          url: ''
-          - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          icon: datacamp
-          organization: Texas A&M University at Galveston
-          organization_url: https://www.datacamp.com
-          title: 'Undergraduate Chemistry Poster Symposium'
-          url: ''
+        - certificate_url: https://www.datacamp.com
+        date_end: '2020-12-21'
+        date_start: '2020-07-01'
+        description: ''
+        icon: datacamp
+        organization: DataCamp
+        organization_url: https://www.datacamp.com
+        title: 'Object-Oriented Programming in R'
+        url: ''
+        - certificate_url: https://www.datacamp.com
+        date_end: '2020-12-21'
+        date_start: '2020-07-01'
+        description: ''
+        icon: datacamp
+        organization: Texas A&M University at Galveston
+        organization_url: https://www.datacamp.com
+        title: 'Undergraduate Chemistry Poster Symposium'
+        url: ''
     design:
       columns: '2'
   - block: collection
