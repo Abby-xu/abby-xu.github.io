@@ -5,7 +5,7 @@ selected:       true
 pub:            "Annual AAAI Conference on Artificial Intelligence (AAAI)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Poster</span>'
 pub_date:       "2024"
 semantic_scholar_id: 2357860412  # use this to retrieve citation count
 abstract: >-
