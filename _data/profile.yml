@@ -1,11 +1,11 @@
 primary_name: "Abby(Rong) Xu"
-secondary_name: "徐榕"
+secondary_name:
 navbar_name: "Abby Xu"
 
-positions:
-- logo: /assets/images/badges/SIT.png  # Logo is optional
-  name: PhD Student
-  affiliation: Stevens Institute of Technology
+# positions:
+# - logo: /assets/images/badges/SIT.png  # Logo is optional
+#   name: PhD Student
+#   affiliation: Stevens Institute of Technology
 
 
 email: "rxu35@stevens.edu"
