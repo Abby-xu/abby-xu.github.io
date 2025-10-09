@@ -5,7 +5,7 @@ selected:       false
 pub:            "American Educational Research Association (AERA)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
+# pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 pub_date:       "2024"
 # semantic_scholar_id: 2357860412  # use this to retrieve citation count
 abstract: >-
