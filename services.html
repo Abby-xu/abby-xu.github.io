@@ -23,14 +23,18 @@ container_class: container-xl
                 <hr>
                 <div class="service-content">
                     {% assign academic_services = site.services | where: "category", "academic" | sort: "order" %}
-                    {% for service in academic_services %}
-                    <div class="mb-4">
-                        <h5>{{ service.title }}</h5>
-                        <div class="service-description">
-                            {{ service.content | markdownify }}
+                    {% if academic_services.size > 0 %}
+                        {% for service in academic_services %}
+                        <div class="mb-4">
+                            <h5>{{ service.title }}</h5>
+                            <div class="service-description">
+                                {{ service.content | markdownify }}
+                            </div>
                         </div>
-                    </div>
-                    {% endfor %}
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted">Academic services information will be added here.</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -47,14 +51,18 @@ container_class: container-xl
                 <hr>
                 <div class="service-content">
                     {% assign misc_services = site.services | where: "category", "misc" | sort: "order" %}
-                    {% for service in misc_services %}
-                    <div class="mb-4">
-                        <h5>{{ service.title }}</h5>
-                        <div class="service-description">
-                            {{ service.content | markdownify }}
+                    {% if misc_services.size > 0 %}
+                        {% for service in misc_services %}
+                        <div class="mb-4">
+                            <h5>{{ service.title }}</h5>
+                            <div class="service-description">
+                                {{ service.content | markdownify }}
+                            </div>
                         </div>
-                    </div>
-                    {% endfor %}
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted">Miscellaneous services information will be added here.</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
