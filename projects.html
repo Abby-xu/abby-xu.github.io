@@ -1,0 +1,156 @@
+---
+layout: default
+title: Projects
+navbar_title: Projects
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+---
+
+{% comment %} 取 projects 集合，按 order / date 排序 {% endcomment %}
+{% assign projects_sorted =
+  site.projects
+  | sort: "order"
+  | sort: "date" | reverse
+%}
+
+<style>
+  /* 卡片浮动与基础外观 */
+  .project-card.hover-lift {
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .project-card.hover-lift:hover,
+  .project-card.hover-lift:focus-within,
+  .project-card.hover-lift.is-hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,.12);
+  }
+  @media (hover: none) {
+    .project-card.hover-lift:active {
+      transform: translateY(-2px);
+      box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,.12);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .project-card.hover-lift { transition: none; }
+  }
+
+  /* 封面图裁切，避免布局跳动 */
+  .project-thumb {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  /* 标题悬停更明显（可选） */
+  .project-card .card-title a:hover { text-decoration: underline; }
+
+  /* 卡片底部链接按钮（可选） */
+  .project-links .btn {
+    padding: .25rem .5rem;
+    font-size: .8rem;
+  }
+</style>
+
+<div class="row">
+  <div class="col-12">
+    <h1 class="mb-3">Projects</h1>
+    <p class="text-muted mb-4">All of my past and current projects are listed here.</p>
+
+    <div class="row">
+      {% for item in projects_sorted %}
+        {%- assign title = item.title -%}
+        {%- assign subtitle = item.subtitle -%}
+        {%- assign thumb = item.thumb | default: item.hero -%}
+        {%- assign detail_url = item.url | default: item.internal_url | default: item.external_url -%}
+        {%- assign excerpt = item.excerpt -%}
+        {%- assign links = item.links -%}
+
+        {%- comment -%}
+          判断 detail_url 是否为外链（含协议且不包含本站 url）
+        {%- endcomment -%}
+        {%- assign is_external = false -%}
+        {% if detail_url %}
+          {% if detail_url contains '://' %}
+            {% unless site.url and detail_url contains site.url %}
+              {% assign is_external = true %}
+            {% endunless %}
+          {% endif %}
+        {% endif %}
+
+        <div class="col-12 col-md-6 col-xl-4 d-flex">
+          <div class="card shadow-sm border-0 mb-4 project-card hover-lift w-100">
+
+            {% if thumb %}
+              <a href="{{ detail_url }}"
+                 {% if is_external %}target="_blank" rel="noopener"{% endif %}>
+                <img class="card-img-top project-thumb"
+                     src="{{ thumb | relative_url }}"
+                     alt="{{ title | escape }}"
+                     loading="lazy" decoding="async">
+              </a>
+            {% endif %}
+
+            <div class="card-body">
+              <h5 class="card-title mb-1">
+                <a class="stretched-link text-decoration-none"
+                   href="{{ detail_url }}"
+                   {% if is_external %}target="_blank" rel="noopener"{% endif %}>
+                  {{ title }}
+                </a>
+              </h5>
+
+              {% if subtitle %}
+                <div class="text-muted small mb-2">{{ subtitle }}</div>
+              {% endif %}
+
+              {% if excerpt %}
+                <p class="card-text">{{ excerpt }}</p>
+              {% endif %}
+
+              {% if links %}
+              <div class="project-links mt-2">
+                {% for l in links %}
+                  <a class="btn btn-sm btn-outline-primary mr-2 mb-2"
+                     href="{{ l.url }}"
+                     target="_blank" rel="noopener">
+                    {% if l.icon %}<i class="{{ l.icon }} mr-1" aria-hidden="true"></i>{% endif %}
+                    {{ l.text }}
+                  </a>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  // 触摸时给卡片加上 .is-hover，短暂显示浮起态
+  document.addEventListener('touchstart', function (e) {
+    const card = e.target.closest('.project-card.hover-lift');
+    if (!card) return;
+    card.classList.add('is-hover');
+    setTimeout(() => card.classList.remove('is-hover'), 180);
+  }, { passive: true });
+
+  // 鼠标移出或失焦时，确保移除
+  document.addEventListener('mouseleave', function (e) {
+    const card = e.target.closest && e.target.closest('.project-card.hover-lift');
+    if (card) card.classList.remove('is-hover');
+  }, true);
+
+  // 键盘 Tab 聚焦时也浮起
+  document.addEventListener('focusin', function (e) {
+    const card = e.target.closest('.project-card.hover-lift');
+    if (card) card.classList.add('is-hover');
+  });
+  document.addEventListener('focusout', function (e) {
+    const card = e.target.closest('.project-card.hover-lift');
+    if (card) card.classList.remove('is-hover');
+  });
+</script>

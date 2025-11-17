@@ -1,0 +1,88 @@
+---
+layout: default
+title: Services
+navbar_title: Services
+container_class: container-xl
+---
+
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">Services</h1>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Academic Services -->
+    <div class="col-md-6 mb-4">
+        <div class="card border-0 shadow-sm bg-white h-100">
+            <div class="card-body">
+                <h2 class="card-title">
+                    <i class="fas fa-graduation-cap text-primary mr-2"></i>
+                    Academic Services
+                </h2>
+                <hr>
+                <div class="service-content">
+                    {% assign academic_services = site.services | where: "category", "academic" | sort: "order" %}
+                    {% if academic_services.size > 0 %}
+                        {% for service in academic_services %}
+                        <div class="mb-4">
+                            <h5>{{ service.title }}</h5>
+                            <div class="service-description">
+                                {{ service.content | markdownify }}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted">Academic services information will be added here.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Misc Services -->
+    <div class="col-md-6 mb-4">
+        <div class="card border-0 shadow-sm bg-white h-100">
+            <div class="card-body">
+                <h2 class="card-title">
+                    <i class="fas fa-cogs text-secondary mr-2"></i>
+                    Misc Services
+                </h2>
+                <hr>
+                <div class="service-content">
+                    {% assign misc_services = site.services | where: "category", "misc" | sort: "order" %}
+                    {% if misc_services.size > 0 %}
+                        {% for service in misc_services %}
+                        <div class="mb-4">
+                            <h5>{{ service.title }}</h5>
+                            <div class="service-description">
+                                {{ service.content | markdownify }}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted">Miscellaneous services information will be added here.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm bg-light">
+            <div class="card-body text-center">
+                <h4 class="card-title">Interested in Working Together?</h4>
+                <p class="card-text">
+                    I'm always open to discussing new opportunities and collaborations. 
+                    Whether you need academic support, technical consulting, or have an interesting project in mind, 
+                    feel free to reach out!
+                </p>
+                <a href="mailto:your-email@example.com" class="btn btn-primary">
+                    <i class="fas fa-envelope mr-2"></i>Get in Touch
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
