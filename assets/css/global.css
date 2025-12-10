@@ -126,3 +126,9 @@ div.lazy {
     .hover-lift { transition: none; }
   }
   
+  /* News card markdown spacing fix */
+  .news-title p {
+    margin: 0;
+    display: inline;
+  }
+  
