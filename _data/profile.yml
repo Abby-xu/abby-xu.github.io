@@ -58,10 +58,13 @@ experience:
 
 services:
  - role: "Reviewer"
+   venue: "ICLR - [Workshop] ES-Reasoning"
+   date: 2026
+ - role: "Reviewer"
    venue: "NeurIPS - D&B Track"
    date: 2025
  - role: "Reviewer"
-   venue: "ICML - [Workshop] World Models "
+   venue: "ICML - [Workshop] World Models"
    date: 2025
  - role: "Reviewer"
    venue: "ICLR - [Workshop] Representational Alignment (Re-Align), [Workshop] GenAI Watermarking (WMARK)"
