@@ -58,7 +58,7 @@ experience:
 
 services:
  - role: "Reviewer"
-   venue: "ICLR - [Workshop] ES-Reasoning"
+   venue: "ICLR - [Workshop] ES-Reasoning, [Workshop] Reliable Agentic AI"
    date: 2026
  - role: "Reviewer"
    venue: "NeurIPS - D&B Track"
