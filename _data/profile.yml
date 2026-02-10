@@ -58,6 +58,9 @@ experience:
 
 services:
  - role: "Reviewer"
+   venue: "ACL"
+   date: 2026
+ - role: "Reviewer"
    venue: "ICLR - [Workshop] ES-Reasoning, [Workshop] Reliable Agentic AI"
    date: 2026
  - role: "Reviewer"
