@@ -58,6 +58,9 @@ experience:
 
 services:
  - role: "Reviewer"
+   venue: "CVPR - [Workshop] Anomaly Detection"
+   date: 2026
+ - role: "Reviewer"
    venue: "ACL"
    date: 2026
  - role: "Reviewer"
