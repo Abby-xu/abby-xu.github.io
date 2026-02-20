@@ -86,18 +86,25 @@
             <div class="mx-2 my-1">
               <h6>Reviewing Services</h6>
               <ul class="list-unstyled mb-1 small">
-                {% for item in site.data.profile.services %}
+                {% assign service_groups = site.data.profile.services | group_by: "date" | sort: "name" | reverse %}
+                {% for group in service_groups %}
                 <li class="mb-2">
-                  {% assign venue_parts = item.venue | split: " - " %}
-                  <div class="d-flex">
-                    <div>
-                      <span class="badge badge-secondary mr-2">{{ venue_parts[0] }}</span>
-                      {% if venue_parts.size > 1 %}
-                        {{ venue_parts[1] }}
-                      {% endif %}
+                  <div class="review-year-row">
+                    <div class="review-items">
+                      {% for item in group.items %}
+                        {% assign venue_parts = item.venue | split: " - " %}
+                        {% assign conf = venue_parts[0] | strip %}
+                        {% assign conf_slug = conf | downcase | replace: "&", "and" | replace: "/", "-" | replace: " ", "-" | replace: ".", "" %}
+                        <span class="review-item">
+                          <span class="conf-tag conf-{{ conf_slug }}">{{ conf }}</span>
+                          {% if venue_parts.size > 1 %}
+                            <span class="review-desc">{{ venue_parts[1] }}</span>
+                          {% endif %}
+                        </span>
+                      {% endfor %}
                     </div>
-                    <div class="ml-auto mt-auto no-break">
-                      <em>{{ item.date }}</em>
+                    <div class="review-year no-break">
+                      <em>{{ group.name }}</em>
                     </div>
                   </div>
                 </li>

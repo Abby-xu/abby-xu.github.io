@@ -131,4 +131,82 @@ div.lazy {
     margin: 0;
     display: inline;
   }
+
+  /* Reviewing services (grouped by year) */
+  .review-year-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .review-items {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+    line-height: 1.25;
+  }
+
+  .review-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    min-width: 0;
+  }
+
+  .review-desc {
+    white-space: normal;
+  }
+
+  .review-year {
+    flex: 0 0 auto;
+    text-align: right;
+    min-width: 3.5rem;
+    line-height: 1.25;
+  }
+
+  .conf-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.1rem 0.45rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    background: #f3f4f6;
+    color: #374151;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .conf-cvpr {
+    background: #e7f0ff;
+    border-color: #b9d3ff;
+    color: #1d4ed8;
+  }
+
+  .conf-acl {
+    background: #e7f8f0;
+    border-color: #b7e7d0;
+    color: #047857;
+  }
+
+  .conf-iclr {
+    background: #f1eaff;
+    border-color: #d9c7ff;
+    color: #6d28d9;
+  }
+
+  .conf-neurips {
+    background: #fff0e8;
+    border-color: #ffd2bf;
+    color: #c2410c;
+  }
+
+  .conf-icml {
+    background: #e6fbfb;
+    border-color: #b7f0ef;
+    color: #0f766e;
+  }
   
