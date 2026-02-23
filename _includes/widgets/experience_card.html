@@ -90,21 +90,46 @@
                 {% for group in service_groups %}
                 <li class="mb-2">
                   <div class="review-year-row">
-                    <div class="review-items">
-                      {% for item in group.items %}
-                        {% assign venue_parts = item.venue | split: " - " %}
-                        {% assign conf = venue_parts[0] | strip %}
-                        {% assign conf_slug = conf | downcase | replace: "&", "and" | replace: "/", "-" | replace: " ", "-" | replace: ".", "" %}
-                        <span class="review-item">
-                          <span class="conf-tag conf-{{ conf_slug }}">{{ conf }}</span>
-                          {% if venue_parts.size > 1 %}
-                            <span class="review-desc">{{ venue_parts[1] }}</span>
-                          {% endif %}
-                        </span>
-                      {% endfor %}
-                    </div>
                     <div class="review-year no-break">
                       <em>{{ group.name }}</em>
+                    </div>
+                    <div class="review-items">
+                      {%- comment -%} Non-workshop items first {%- endcomment -%}
+                      {% for item in group.items %}
+                        {% assign venue_lower = item.venue | downcase %}
+                        {% unless venue_lower contains "workshop" %}
+                          {% assign venue_parts = item.venue | split: " - " %}
+                          {% assign conf = venue_parts[0] | strip %}
+                          {% assign conf_slug = conf | downcase | replace: "&", "and" | replace: "/", "-" | replace: " ", "-" | replace: ".", "" %}
+                          <span class="review-item">
+                            <span class="conf-tag conf-{{ conf_slug }}">{{ conf }}</span>
+                            {% if venue_parts.size > 1 %}
+                              <span class="review-desc">{{ venue_parts[1] }}</span>
+                            {% endif %}
+                          </span>
+                        {% endunless %}
+                      {% endfor %}
+
+                      {%- comment -%} Workshop items after {%- endcomment -%}
+                      {% for item in group.items %}
+                        {% assign venue_lower = item.venue | downcase %}
+                        {% if venue_lower contains "workshop" %}
+                          {% assign venue_parts = item.venue | split: " - " %}
+                          {% assign conf = venue_parts[0] | strip %}
+                          {% assign conf_slug = conf | downcase | replace: "&", "and" | replace: "/", "-" | replace: " ", "-" | replace: ".", "" %}
+                          {% assign workshop_desc = "" %}
+                          {% if venue_parts.size > 1 %}
+                            {% assign workshop_desc = venue_parts[1] %}
+                          {% endif %}
+                          {% assign workshop_desc = workshop_desc | replace: "[Workshop]", "" | replace: "[workshop]", "" | replace: "  ", " " | replace: "  ", " " | replace: " ,", "," | strip %}
+                          <span class="review-item">
+                            <span class="conf-tag conf-{{ conf_slug }}">{{ conf }} Workshop</span>
+                            {% if workshop_desc != "" %}
+                              <span class="review-desc">{{ workshop_desc }}</span>
+                            {% endif %}
+                          </span>
+                        {% endif %}
+                      {% endfor %}
                     </div>
                   </div>
                 </li>

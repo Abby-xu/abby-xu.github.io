@@ -136,7 +136,7 @@ div.lazy {
   .review-year-row {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
   .review-items {
@@ -161,8 +161,8 @@ div.lazy {
 
   .review-year {
     flex: 0 0 auto;
-    text-align: right;
-    min-width: 3.5rem;
+    text-align: left;
+    min-width: 4rem;
     line-height: 1.25;
   }
 
