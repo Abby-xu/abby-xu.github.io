@@ -5,7 +5,7 @@ selected:       true
 pub:            "International Conference on Learning Representations Workshops on Lifelong Agents (ICLR-LLA)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Poster</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Workshop Poster</span>'
 pub_date:       "2026"
 # semantic_scholar_id: 2357860412  # use this to retrieve citation count
 abstract: >-

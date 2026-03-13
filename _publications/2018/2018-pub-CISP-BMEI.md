@@ -5,7 +5,7 @@ selected:       false
 pub:            "International Congress on Image and Signal Processing, BioMedical Engineering and Informatics (CISP-BMEI)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-# pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Conference</span>'
 pub_date:       "2018"
 semantic_scholar_id: 2115803335  # use this to retrieve citation count
 abstract: >-

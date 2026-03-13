@@ -1,11 +1,11 @@
 ---
 title:          "Mapping from Meaning: Addressing the Miscalibration of Prompt-Sensitive Language Models"
-date:           2024-11-30 00:01:00 +0800
+date:           2025-2-30 00:01:00 +0800
 selected:       true
 pub:            "Annual AAAI Conference on Artificial Intelligence (AAAI)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Poster</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Conference</span>'
 pub_date:       "2025"
 semantic_scholar_id: 2357860412  # use this to retrieve citation count
 abstract: >-
