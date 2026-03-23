@@ -58,6 +58,9 @@ experience:
 
 services:
  - role: "Reviewer"
+   venue: "TIFS"
+   date: 2026
+ - role: "Reviewer"
    venue: "CVPR - [Workshop] Anomaly Detection, [Workshop] Multi-Modal Reasoning for Agentic Intelligence"
    date: 2026
  - role: "Reviewer"
