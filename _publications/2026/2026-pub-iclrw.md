@@ -17,7 +17,7 @@ authors:
   - Xiaochan Xue#
 # * is equal contribution
 links:
-  # Paper: /assets/files/papers/2024_aaai.pdf
+  Paper: /assets/files/papers/2026_iclrw.pdf
   Code: https://github.com/Abby-xu/SmartHome-DriftBench
   # Unsplash: https://unsplash.com/photos/sliced-in-half-pineapple--_PLJZmHZzk
 
