@@ -23,7 +23,7 @@ deadline: conf-track.html
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am a Ph.D. student at Stevens Institute of Technology ECE department, advising by Prof. <a href="https://www.stevens.edu/profile/xdu16" target="_blank">Xiaojiang Du</a>. My research interests include IoT Security, AI for security and privacy, and LLM security. 
+    I am a Ph.D. student at Stevens Institute of Technology ECE department, advised by Prof. <a href="https://www.stevens.edu/profile/xdu16" target="_blank">Xiaojiang Du</a>. My research interests include IoT Security, AI for security and privacy, and LLM security. 
   </p>
 
 portrait_url: /assets/images/photos/avatar.jpg
@@ -36,11 +36,11 @@ education:
   position: >- 
     Department of Electrical Engineering and Computer Science <br/>
     Ph.D. in Computer Engineering
-  date: Expected Dec. 2028
+  date: Expected May 2029
 - name: University of Texas at Austin
   logo: /assets/images/badges/UT.png
   position: M.S. in Computer Science
-  date: Expected Dec. 2026
+  date: Aug. 2026
 - name: Texas A&M University
   logo: /assets/images/badges/TAMU.svg
   position: B.S. in Computer Science, Minor in Mathematics & Cybersecurity
